@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emotion Detection</title>
+
+    <style>
+        body {
+            background: linear-gradient(to right, #667eea, #764ba2);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            background: white;
+            color: black;
+            width: 420px;
+            margin: 80px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        input[type="file"] {
+            margin: 15px 0;
+        }
+
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            background: #5a67d8;
+        }
+
+        img {
+            margin-top: 15px;
+            border-radius: 10px;
+        }
+
+        .prediction {
+            margin-top: 20px;
+            font-size: 26px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>😊 Emotion Detector</h1>
+
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <br>
+            <button type="submit">Predict Emotion</button>
+        </form>
+
+        {% if image %}
+            <h3>Uploaded Image:</h3>
+            <img src="{{ image }}" width="260">
+        {% endif %}
+
+        {% if prediction %}
+            <div class="prediction">
+                {% if prediction == 'Happy' %} 😄
+                {% elif prediction == 'Sad' %} 😢
+                {% elif prediction == 'Angry' %} 😡
+                {% elif prediction == 'Fear' %} 😱
+                {% elif prediction == 'Surprise' %} 😲
+                {% else %} 😐
+                {% endif %}
+                <br>
+                {{ prediction }}
+            </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>
