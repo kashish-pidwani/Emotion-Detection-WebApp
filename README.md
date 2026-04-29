@@ -29,8 +29,8 @@ Python | TensorFlow | OpenCV | Flask | HTML | CSS
 
 ## 📸 Demo
 
-![Upload](static/upload.png)  
-![Result](static/result.png)  
+![Upload](upload.png)  
+![Result](result.png)  
 
 ---
 
