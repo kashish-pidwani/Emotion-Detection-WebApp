@@ -37,7 +37,7 @@ Python | TensorFlow | OpenCV | Flask | HTML | CSS
 ## ⚙️ Run Locally
 
 ```bash
-git clone https://github.com/your-username/Emotion-Detection-WebApp.git
+git clone https://github.com/kashish-pidwani/Emotion-Detection-WebApp.git
 cd Emotion-Detection-WebApp
 pip install flask tensorflow opencv-python numpy
 python app.py
