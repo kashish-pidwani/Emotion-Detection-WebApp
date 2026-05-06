@@ -1,5 +1,16 @@
 # 😊 Facial Emotion Detection Web App
 
+## Internship Details
+
+- **Company:** CodTech IT Solutions  
+- **Name:** Kashish Pidwani  
+- **Intern ID:** CTIS8144 
+- **Domain:** Data Science
+- **Duration:** 4 Weeks  
+
+
+## Description
+
 This is a deep learning-based web application that detects human emotions from images using a CNN model.
 
 ---
